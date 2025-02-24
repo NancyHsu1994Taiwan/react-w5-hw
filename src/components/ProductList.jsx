@@ -1,7 +1,13 @@
 import { Modal } from "bootstrap";
 import PropTypes from "prop-types";
 
-function ProductList({ products, setTempProduct, productModalRef, addToCart }) {
+function ProductList({
+  products,
+  setTempProduct,
+  productModalRef,
+  addToCart,
+  loadingState,
+}) {
   const handleSeeMore = (product) => {
     setTempProduct(product);
     openModal();
@@ -54,6 +60,12 @@ function ProductList({ products, setTempProduct, productModalRef, addToCart }) {
                     }}
                   >
                     加到購物車
+                    {/* {loadingState && (
+                      <span
+                        className="spinner-border spinner-border-sm"
+                        aria-hidden="true"
+                      ></span>
+                    )} */}
                   </button>
                 </div>
               </td>
